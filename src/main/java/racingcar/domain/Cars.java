@@ -20,7 +20,7 @@ public class Cars {
     }
 
     public void moveRandomly(TryCount tryCount) {
-        for (int i=0; i<tryCount.getCount(); i++) {
+        for (int i = 0; i < tryCount.getCount(); i++) {
             cars.stream()
                     .forEach(car -> car.moveRandomly());
         }

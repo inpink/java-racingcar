@@ -17,7 +17,7 @@ class PositionsTest {
         positions.notMove();
         positions.move();
 
-        List<Integer> expected = List.of(1,1,2);
+        List<Integer> expected = List.of(1, 1, 2);
 
         // Then
         assertEquals(expected, positions.getPositions());

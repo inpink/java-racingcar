@@ -19,5 +19,4 @@ public class InputView {
         final String input = InputUtil.input();
         return TryCountMapper.toTryCount(input);
     }
-
 }

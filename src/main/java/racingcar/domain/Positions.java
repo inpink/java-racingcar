@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Positions {
 
-    private final static int START_POSITION = 0;
+    public final static int START_POSITION = 0;
     private final List<Integer> positions;
 
     public Positions(List<Integer> positions) {
@@ -24,7 +24,7 @@ public class Positions {
         positions.add(getLastPosition());
     }
 
-    private int getLastPosition() {
+    public int getLastPosition() {
         if (positions.size() == 0) {
             return START_POSITION;
         }
@@ -33,5 +33,9 @@ public class Positions {
 
     public List<Integer> getPositions() {
         return positions;
+    }
+
+    public int getPosition(int index) {
+        return positions.get(index);
     }
 }

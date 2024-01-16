@@ -1,7 +1,8 @@
 package racingcar.domain;
 
+import static racingcar.domain.Positions.START_POSITION;
+
 import java.util.List;
-import java.util.stream.IntStream;
 
 public class Cars {
     private final List<Car> cars;
@@ -23,5 +24,24 @@ public class Cars {
             cars.stream()
                     .forEach(car -> car.moveRandomly());
         }
+    }
+
+    public List<Car> calculateWinner() {
+        int maxPosition = calculateMaxPosition();
+
+        return cars.stream()
+                .filter(car -> car.isSameMaxPosition(maxPosition))
+                .toList();
+    }
+
+    public int calculateMaxPosition() {
+        return cars.stream()
+                .mapToInt(car -> car.getMaxPosition())
+                .max()
+                .orElse(START_POSITION);
+    }
+
+    public List<Car> getCars() {
+        return cars;
     }
 }

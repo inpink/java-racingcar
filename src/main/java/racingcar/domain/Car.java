@@ -23,11 +23,31 @@ public class Car {
     public void moveRandomly() {
         int randomNumber = Randoms.pickNumberInRange(MIN_RANDOM_RANGE, MAX_RANDOM_RANGE);
 
-        if (randomNumber >= MIN_RANDOM_RANGE) {
+        if (randomNumber >= MIN_MOVE_NUMBER) {
             positions.move();
         }
-        if (randomNumber < MIN_RANDOM_RANGE) {
+        if (randomNumber < MIN_MOVE_NUMBER) {
             positions.notMove();
         }
+    }
+
+    public boolean isSameMaxPosition(int maxPosition) {
+        return maxPosition == getMaxPosition();
+    }
+
+    public int getMaxPosition() {
+        return positions.getLastPosition();
+    }
+
+    public CarName getCarName() {
+        return carName;
+    }
+
+    public Positions getPositions() {
+        return positions;
+    }
+
+    public int getPosition(int index) {
+        return positions.getPosition(index);
     }
 }

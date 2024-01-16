@@ -1,12 +1,14 @@
 package racingcar.domain;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import java.util.List;
 import java.util.stream.Stream;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CarNamesTest {
 
@@ -41,9 +43,9 @@ class CarNamesTest {
     static Stream<List<String>> invalidCarNamesProvider() {
         return Stream.of(
                 List.of(),
-                List.of(" ", " ")
+                List.of(" ", " "),
+                List.of("Car", "Car"), // duplicated
+                List.of("A", "B", "A") // duplicated
         );
     }
-
-
 }

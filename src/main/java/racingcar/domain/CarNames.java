@@ -45,9 +45,7 @@ public class CarNames {
         }
     }
 
-    public List<String> getCarNames() {
-        return carNames.stream()
-                .map(name -> name.getName())
-                .toList();
+    public List<CarName> getCarNames() {
+        return carNames;
     }
 }

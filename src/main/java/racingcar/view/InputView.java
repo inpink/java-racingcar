@@ -1,7 +1,9 @@
 package racingcar.view;
 
 import racingcar.domain.CarNames;
+import racingcar.domain.TryCount;
 import racingcar.mapper.CarNamesMapper;
+import racingcar.mapper.TryCountMapper;
 import racingcar.util.InputUtil;
 
 public class InputView {
@@ -13,5 +15,9 @@ public class InputView {
         return CarNamesMapper.toCarNames(input);
     }
 
+    public TryCount inputTryCount() {
+        final String input = InputUtil.input();
+        return TryCountMapper.toTryCount(input);
+    }
 
 }

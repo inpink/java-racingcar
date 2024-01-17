@@ -9,7 +9,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 class CarNameTest {
-
     @ParameterizedTest
     @ValueSource(strings = {"A", "Ab", "ABC", "ABCD", "ABCDE"})
     void create_withValidLengths(String name) {

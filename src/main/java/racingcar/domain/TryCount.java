@@ -4,7 +4,6 @@ public class TryCount {
     private final static int MIN_COUNT = 1;
     private final static String INVALID_TRY_COUNT = "올바르지 않은 시도 횟수입니다.";
 
-
     private final int count;
 
     public TryCount(int count) {

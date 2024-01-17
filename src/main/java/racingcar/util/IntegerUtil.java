@@ -1,7 +1,6 @@
 package racingcar.util;
 
 public class IntegerUtil {
-
     private IntegerUtil() {
     }
 

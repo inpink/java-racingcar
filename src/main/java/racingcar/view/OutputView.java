@@ -6,7 +6,6 @@ import racingcar.domain.Cars;
 import racingcar.domain.TryCount;
 
 public class OutputView {
-
     public void outputWinners(List<Car> winners) {
         winners.stream()
                 .forEach(winner -> System.out.println("우승자: " + winner.getCarName().getName()));

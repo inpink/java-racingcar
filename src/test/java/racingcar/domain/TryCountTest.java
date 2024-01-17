@@ -9,7 +9,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 class TryCountTest {
-
     @ParameterizedTest
     @ValueSource(ints = {1, 5, 10})
     void create_withValidCount(int count) {

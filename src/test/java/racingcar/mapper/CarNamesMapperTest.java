@@ -10,7 +10,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import racingcar.domain.CarNames;
 
 public class CarNamesMapperTest {
-
     private static Stream<Arguments> provideCarNames() {
         return Stream.of(
                 Arguments.of("BMW,Mercedes,Audi", Arrays.asList("BMW", "Mercedes", "Audi")),

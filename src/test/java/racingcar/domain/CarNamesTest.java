@@ -11,7 +11,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
 class CarNamesTest {
-
     static Stream<List<String>> validCarNamesProvider() {
         return Stream.of(
                 List.of("Car1"),

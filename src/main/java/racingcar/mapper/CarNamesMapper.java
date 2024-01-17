@@ -6,7 +6,6 @@ import racingcar.domain.CarNames;
 import racingcar.util.StringUtil;
 
 public class CarNamesMapper {
-
     private CarNamesMapper() {
     }
 

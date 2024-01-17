@@ -11,7 +11,6 @@ import org.junit.jupiter.params.provider.ValueSource;
 import racingcar.domain.TryCount;
 
 class TryCountMapperTest {
-
     @ParameterizedTest
     @ValueSource(strings = {"1", "10", "123"})
     void toTryCount_withValidInput(String input) {

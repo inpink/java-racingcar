@@ -16,7 +16,7 @@ public class Car {
         return new Car(numberGenerator, name, Positions.createEmpty());
     }
 
-    public void moveRandomly() {
+    public void moveByNumber() {
         int moveNumber = numberGenerator.generate();
 
         if (moveNumber >= MIN_MOVE_NUMBER) {

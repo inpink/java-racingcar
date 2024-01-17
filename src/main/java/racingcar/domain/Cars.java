@@ -11,9 +11,9 @@ public class Cars {
         this.cars = cars;
     }
 
-    public static Cars create(CarNames carNames) {
+    public static Cars create(CarNames carNames, NumberGenerator numberGenerator) {
         List<Car> cars = carNames.getCarNames().stream()
-                .map(name -> Car.create(name))
+                .map(name -> Car.create(name, numberGenerator))
                 .toList();
 
         return new Cars(cars);
@@ -30,13 +30,13 @@ public class Cars {
         int maxPosition = calculateMaxPosition();
 
         return cars.stream()
-                .filter(car -> car.isSameMaxPosition(maxPosition))
+                .filter(car -> car.isSameLastPosition(maxPosition))
                 .toList();
     }
 
     public int calculateMaxPosition() {
         return cars.stream()
-                .mapToInt(car -> car.getMaxPosition())
+                .mapToInt(car -> car.getLastPosition())
                 .max()
                 .orElse(START_POSITION);
     }
